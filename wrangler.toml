@@ -1,0 +1,11 @@
+# Cloudflare Pages: serves the built PWA (dist) and runs functions/api/* for the sync API.
+# Pages rather than a Worker because the office network blocks *.workers.dev but not *.pages.dev.
+name = "household"
+compatibility_date = "2026-10-01"
+pages_build_output_dir = "./dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "household"
+database_id = "a825795c-3df0-4f94-8e35-31536e8e6f19"
+migrations_dir = "migrations"
